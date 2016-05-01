@@ -5,10 +5,13 @@ require './lib/database_connector'
 class AppConfigurator
   attr_accessor :config
 
+  def initialize
+    load_config
+  end
+
   def configure
     setup_i18n
     setup_database
-    load_config
   end
 
   def load_config
