@@ -61,7 +61,7 @@ class MessageResponder
     user.save
 
     # TODO: reset user offset if limit is reached
-    response.parsed_response['records']
+    response.parsed_response['records'][0,num]
   end
 
   def answer_with_text(text)
