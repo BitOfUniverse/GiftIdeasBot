@@ -46,7 +46,7 @@ class MessageResponder
     ideas = load_ideas(num)
 
     ideas.map do |idea|
-      idea.title
+      idea['title']
     end.join("\r\n")
   end
 
