@@ -30,10 +30,6 @@ class BotServer
     config.get_token
   end
 
-  def bot_webhook_url
-    URI::join(config.get_bot_webhook_url, '/'+bot_token).to_s
-  end
-
   def process_update(data)
     update = Telegram::Bot::Types::Update.new(data)
     message = extract_message(update)
@@ -45,6 +41,10 @@ class BotServer
   def configure
     @config ||= AppConfigurator.new
     config.configure
+  end
+
+  def bot_webhook_url
+    URI::join(config.get_bot_webhook_url, '/'+bot_token).to_s
   end
 
   def setup_bot
