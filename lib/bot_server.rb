@@ -31,7 +31,7 @@ class BotServer
   end
 
   def bot_webhook_url
-    URI::join(config.get_url, bot_token).to_s
+    URI::join(config.get_bot_webhook_url, bot_token).to_s
   end
 
   def process_update(data)
