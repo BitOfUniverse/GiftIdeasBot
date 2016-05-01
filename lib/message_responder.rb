@@ -20,20 +20,22 @@ class MessageResponder
   def respond
     logger.debug "received '#{message.inspect}'"
 
-    case parse_command(message.text)
-    when '/start'
-      answer_with_greeting_message
-    when '/stop'
-      answer_with_farewell_message
-    when '/idea'
-      answer_with_ideas(1)
-    when '/5ideas'
-      answer_with_ideas(5)
-    when '/10ideas'
-      answer_with_ideas(10)
-    else
-      answer_with_text message.text
-    end
+    text = case parse_command(message.text)
+             when '/start'
+               answer_with_greeting_message
+             when '/stop'
+               answer_with_farewell_message
+             when '/idea'
+               answer_with_ideas(1)
+             when '/5ideas'
+               answer_with_ideas(5)
+             when '/10ideas'
+               answer_with_ideas(10)
+             else
+               answer_with_text message.text
+           end
+    
+    logger.debug "respond: #{text}"
   end
 
   private
