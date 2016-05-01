@@ -12,7 +12,10 @@ class AppConfigurator
   end
 
   def load_config
-    self.config = ENV.to_hash.merge(YAML::load(IO.read('config/secrets.yml')))
+    config_file = 'config/secrets.yml'
+    self.config = ENV.to_hash
+
+    self.config.merge!(YAML::load(IO.read(config_file))) if File.exist?(config_file)
   end
 
   def get_token
