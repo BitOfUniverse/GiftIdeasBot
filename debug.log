@@ -1,0 +1,24 @@
+# Logfile created on 2016-03-18 12:37:35 +0300 by logger.rb/44203
+D, [2016-03-18T12:41:53.896353 #57319] DEBUG -- :   [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", 3750058]]
+D, [2016-03-18T12:41:53.905820 #57319] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-03-18T12:41:53.910583 #57319] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("uid") VALUES ($1) RETURNING "id"[0m  [["uid", 3750058]]
+D, [2016-03-18T12:41:53.911154 #57319] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2016-03-18T12:42:02.459003 #57319] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", 3750058]]
+D, [2016-03-18T12:46:36.150127 #57424] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", 3750058]]
+D, [2016-03-18T12:46:36.161391 #57424] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-03-18T12:46:36.164407 #57424] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("uid", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["uid", 3750058], ["created_at", "2016-03-18 09:46:36.163023"], ["updated_at", "2016-03-18 09:46:36.163023"]]
+D, [2016-03-18T12:46:36.165137 #57424] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2016-03-18T16:52:14.261207 #58573] DEBUG -- :   [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+D, [2016-03-18T16:52:53.074564 #58573] DEBUG -- :   [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+D, [2016-03-18T18:43:37.457170 #60024] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", 3750058]]
+D, [2016-03-18T18:43:37.462924 #60024] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-03-18T18:43:37.466989 #60024] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("uid", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["uid", 3750058], ["created_at", "2016-03-18 15:43:37.465363"], ["updated_at", "2016-03-18 15:43:37.465363"]]
+D, [2016-03-18T18:43:37.467595 #60024] DEBUG -- :   [1m[35m (0.2ms)[0m  COMMIT
+D, [2016-03-18T18:43:49.788944 #60027] DEBUG -- :   [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+D, [2016-03-18T18:44:17.092779 #60027] DEBUG -- :   [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+D, [2016-03-18T18:44:36.107291 #60027] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+D, [2016-03-18T18:44:49.394521 #60027] DEBUG -- :   [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+D, [2016-03-18T21:48:05.412914 #61705] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", 4]]
+D, [2016-03-18T21:48:05.418668 #61705] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2016-03-18T21:48:05.422218 #61705] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("uid", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["uid", 4], ["created_at", "2016-03-18 18:48:05.420972"], ["updated_at", "2016-03-18 18:48:05.420972"]]
+D, [2016-03-18T21:48:05.423020 #61705] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
