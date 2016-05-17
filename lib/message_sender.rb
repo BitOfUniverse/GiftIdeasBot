@@ -9,11 +9,11 @@ class MessageSender
   attr_reader :logger
 
   def initialize(options)
-    @bot = options[:bot]
-    @text = options[:text]
-    @chat = options[:chat]
+    @bot     = options[:bot]
+    @text    = options[:text]
+    @chat    = options[:chat]
     @answers = options[:answers]
-    @logger = AppConfigurator.new.get_logger
+    @logger  = AppConfigurator.new.get_logger
   end
 
   def send

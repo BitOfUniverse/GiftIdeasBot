@@ -10,10 +10,10 @@ class MessageResponder
   attr_reader :bot_username
 
   def initialize(options)
-    @bot = options[:bot]
-    @message = options[:message]
-    @user = User.where(uid: message.from.id).first_or_create
-    @logger = AppConfigurator.new.get_logger
+    @bot          = options[:bot]
+    @message      = options[:message]
+    @user         = User.where(uid: message.from.id).first_or_create
+    @logger       = AppConfigurator.new.get_logger
     @bot_username = AppConfigurator.new.get_bot_name
   end
 
@@ -55,13 +55,13 @@ class MessageResponder
   def load_ideas(num)
     api = 'https://ideasforgifts.herokuapp.com/api/ideas'
 
-    url = "#{api}?offset=#{user.offset}"
-    response = HTTParty.get(url)
+    url         = "#{api}?offset=#{user.offset}"
+    response    = HTTParty.get(url)
     user.offset += num
     user.save
 
     # TODO: reset user offset if limit is reached
-    response.parsed_response['records'][0,num]
+    response.parsed_response['records'][0, num]
   end
 
   def answer_with_text(text)

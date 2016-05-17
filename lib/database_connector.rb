@@ -15,12 +15,12 @@ class DatabaseConnector
 
         uri = URI(ENV['DATABASE_URL'])
         {
-            'adapter' => uri.scheme == "postgres" ? "postgresql" : uri.scheme,
-            'database' => (uri.path || "").split("/")[1],
-            'user' =>  uri.user,
-            'password' => uri.password,
-            'host' => uri.host,
-            'port' => uri.port
+          'adapter'  => uri.scheme == "postgres" ? "postgresql" : uri.scheme,
+          'database' => (uri.path || "").split("/")[1],
+          'user'     => uri.user,
+          'password' => uri.password,
+          'host'     => uri.host,
+          'port'     => uri.port
         }
       else
         YAML::load(File.open('config/database.yml'))

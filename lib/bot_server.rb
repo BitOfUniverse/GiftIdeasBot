@@ -16,9 +16,9 @@ class BotServer
     if request.post?
       json = JSON::parse(request.body.read)
       process_update(json)
-      ['200', {'Content-Type' => 'text/json'}, ['']]
+      ['200', { 'Content-Type' => 'text/json' }, ['']]
     else
-      ['200', {'Content-Type' => 'text/json'}, ['Hey! I\'m telegram bot server!']]
+      ['200', { 'Content-Type' => 'text/json' }, ['Hey! I\'m telegram bot server!']]
     end
   end
 
@@ -31,7 +31,7 @@ class BotServer
   end
 
   def process_update(data)
-    update = Telegram::Bot::Types::Update.new(data)
+    update  = Telegram::Bot::Types::Update.new(data)
     message = extract_message(update)
     MessageResponder.new(bot: bot, message: message).respond
   end
