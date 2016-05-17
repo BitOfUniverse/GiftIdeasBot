@@ -25,11 +25,11 @@ class MessageResponder
                greeting_message
              when '/stop'
                farewell_message
-             when '/idea'
+             when '/idea', 'идея'
                collect_ideas(1)
-             when '/5ideas'
+             when '/5ideas', '5 идей'
                collect_ideas(5)
-             when '/10ideas'
+             when '/10ideas', '10 идей'
                collect_ideas(10)
              else
                message.text # echo
