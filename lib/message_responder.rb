@@ -69,7 +69,11 @@ class MessageResponder
   end
 
   def greeting_message
-    I18n.t('greeting_message')
+    %q{Привет! У меня есть огромное количество идей подарков!
+    /idea
+    /5ideas
+    /10ideas
+    }
   end
 
   def farewell_message
